@@ -1,5 +1,19 @@
 package discord
 
+type User struct {
+	ID            string `json:"id"`
+	Username      string `json:"username"`
+	Discriminator string `json:"discriminator"`
+	Avatar        string `json:"avatar"`
+	Bot           bool   `json:"bot"`
+	MFAEnabled    bool   `json:"mfa_enabled"`
+	Locale        string `json:"locale"`
+	Verified      bool   `json:"verified"`
+	Email         bool   `json:"email"`
+	Flags         int    `json:"flags"`
+	PremiumType   int    `json:"premiumType"`
+}
+
 type GuildRole struct {
 	ID          string `json:"id"`
 	Name        string `json:"name"`
@@ -21,16 +35,3 @@ type GuildMember struct {
 	Mute         bool     `json:"mute"`
 }
 
-type User struct {
-	ID            string `json:"id"`
-	Username      string `json:"username"`
-	Discriminator string `json:"discriminator"`
-	Avatar        string `json:"avatar"`
-	Bot           bool   `json:"bot"`
-	MFAEnabled    bool   `json:"mfa_enabled"`
-	Locale        string `json:"locale"`
-	Verified      bool   `json:"verified"`
-	Email         bool   `json:"email"`
-	Flags         int    `json:"flags"`
-	PremiumType   int    `json:"premium_type"`
-}
